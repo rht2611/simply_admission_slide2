@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Admission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h5 class="main-title">Upload Raw Data</h5>
+        <div class="inner-container">
+            <div class="sidebar">
+                <aside>
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines complete"></i>
+                             
+                        </div>
+                        
+                        <div>
+                            <p><span class="small-text">STEP 1</span><br>Raw Data Details</p>
+                        </div>
+                    </div>
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines active"></i>
+                        </div>
+                       
+                        <div>
+                            <p><span class="small-text">STEP 2</span><br>Upload Excel File</p>
+                        </div>
+                    </div>
+
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        
+                        <div>
+                            <p><span class="small-text">STEP 3</span><br>Label Mapping</p>
+                        </div>
+                    </div>
+                    <div class="step step-div">
+                        <div class="icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <div>
+                            <p><span class="small-text">STEP 4</span><br>Validation & Finish</p>
+                        </div>
+                    </div>
+
+
+                </aside>
+            </div>
+
+            <div class="main">
+                <div class="steps">
+                    <h4>Step 2. Upload Excel File</h4>
+                    <p class="bolded-text">Import xls file to upload data</p>
+                </div>
+                <div class="upload-file-col">
+                    <h5 class="main-title">Upload Files</h5>
+                    <p class="light-text">Upload CSV File you want to Import.</p>
+                    <div class="drag-area">
+                        <i class="fa fa-cloud-upload"></i>
+                        <p class="dark-text">Drag and Drop your files here.</p>
+                        <p class="light-text">OR</p>
+                        <label for="inputField" class="btn">BROWSE FILES</label>
+                        <input type="file" id="inputField" style="display:none">
+                    </div>
+
+
+                </div>
+                <div class="instructions-col">
+                    <h5 class="main-title">Instructions</h5>
+                    <div>
+                        <p class="dark-text">Download sample file from here.</p>
+                        <button class="btn"><i class="fa-solid fa-download"></i> DOWNLOAD</button>
+
+                    </div>
+                    <div>
+                        <p class="dark-text">The file is in CSV format. (Download a sample CSV file here)</p>
+                        <p class="light-text">Using an excel sheet? Change an XLS sheet as a file using "Save As".</p>
+
+                    </div>
+
+                    <div>
+                        <p class="dark-text">First row of sheet must have header labels.</p>
+                        <form action="">
+                            <label for="header">Has header :</label>&nbsp;
+                            <input type="checkbox" id="header" name="header" value="header">
+                        </form>
+                        <p class="light-text">Edunext will use each column header to match will internal header label
+                            for better mapping and maintaining proper import data.</p>
+
+                    </div>
+                    <div>
+                        <p class="dark-text">Each row must contain valid data.</p>
+                        <p class="light-text">Either email id or mobile number in each row is a must for uploading a CSV
+                            file. In case both are missing, that particular row of data will not be imported. Till the
+                            time either email or mobile number Is unique in a fow of sheet, contact will be imported.
+                        </p>
+
+                    </div>
+                    <div class="field buttons">
+                        <div><button class="reset-button" type="reset" value="Reset">Previous</button></div>
+                        <div><button class="save-button" type="submit" value="Submit">Save & Next</button></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
